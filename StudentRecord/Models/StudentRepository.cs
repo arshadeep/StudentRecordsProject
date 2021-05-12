@@ -30,7 +30,7 @@ namespace StudentRecord.Models
         {
            
                 student.RollNo = students.Max(e => e.RollNo) + 1;
-                students.Add(student);//here we are adding the employee object in list _employeeList which is of Employee type
+                students.Add(student);
                 return student;
             
         }
