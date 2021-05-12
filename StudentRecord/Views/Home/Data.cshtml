@@ -1,0 +1,25 @@
+﻿@model List<Student>
+
+@{
+    ViewBag.Title = "Search result";
+}
+<table class="table">
+    <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+    </tr>
+    @foreach (var student in Model)
+    {
+    <tr>
+        <td>@student.RollNo</td>
+        <td> @student.Name</td>
+        <td> @student.Age</td>
+        <td>@student.Gender</td>
+        
+        <td><a asp-controller="home" asp-action="edit" asp-route-RollNo="@student.RollNo" class="btn btn-primary m-1">Edit</a></td>
+    </tr>
+    }
+
+    </table>
